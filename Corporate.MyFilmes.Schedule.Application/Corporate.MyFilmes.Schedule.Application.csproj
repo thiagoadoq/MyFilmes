@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Behaviors\**" />
+    <Compile Remove="Mapping\Dto\Bloco\**" />
+    <EmbeddedResource Remove="Behaviors\**" />
+    <EmbeddedResource Remove="Mapping\Dto\Bloco\**" />
+    <None Remove="Behaviors\**" />
+    <None Remove="Mapping\Dto\Bloco\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MailKit" Version="2.11.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+
+    <PackageReference Include="MimeKit" Version="2.11.0" />
+    <PackageReference Include="MongoDB.Bson" Version="2.14.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.1" />  
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Corporate.MyFilmes.Schedule.Domain\Corporate.MyFilmes.Schedule.Domain.csproj" />
+    <ProjectReference Include="..\Corporate.MyFilmes.Schedule.Infra\Corporate.MyFilmes.Schedule.Infra.csproj" />
+  </ItemGroup>
+
+</Project>
